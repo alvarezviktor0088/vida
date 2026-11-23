@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visa Docs Group — Оформлення європейських документів за 21 день</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#0b1e3a;--navy2:#122a4d;--gold:#d4af37;--gold2:#e8c547;--text:#1e293b;--muted:#64748b;--soft:#f8fafc;--border:#e2e8f0;--radius:14px;--shadow:0 12px 40px rgba(11,30,58,.1)}
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:Inter,system-ui,sans-serif;color:var(--text);background:#fff;line-height:1.55}
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;display:block}
+    .container{max-width:1140px;margin:0 auto;padding:0 20px}
+    .header{position:fixed;top:0;left:0;right:0;z-index:1000;background:var(--navy);height:68px;display:flex;align-items:center}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;width:100%;max-width:1140px;margin:0 auto;padding:0 20px}
+    .logo{display:flex;align-items:center;gap:10px}
+    .logo img{height:44px;width:44px;border-radius:50%;object-fit:cover}
+    .logo span{color:#fff;font-weight:700;font-size:1.05rem}
+    .nav{display:flex;gap:26px}
+    .nav a{color:rgba(255,255,255,.85);font-size:.92rem;font-weight:500}
+    .nav a:hover{color:#fff}
+    .header-actions{display:flex;align-items:center;gap:12px}
+    .tg-icon{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center}
+    .tg-icon svg{width:18px;height:18px;fill:#fff}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:11px 22px;border-radius:50px;font-weight:600;font-size:.9rem;border:none;cursor:pointer;transition:.2s}
+    .btn-gold{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#1a1a1a}
+    .btn-gold:hover{transform:translateY(-1px)}
+    .btn-navy{background:var(--navy);color:#fff}
+    .btn-navy:hover{background:var(--navy2)}
+    .btn-white{background:#fff;color:var(--navy)}
+    .menu-toggle{display:none;background:none;border:none;color:#fff;font-size:1.4rem;cursor:pointer}
+    .hero{min-height:90vh;padding:100px 0 70px;background:linear-gradient(105deg,rgba(11,30,58,.88) 0%,rgba(18,42,77,.7) 50%,rgba(11,30,58,.5) 100%),url('https://images.unsplash.com/photo-1766247096046-1fc74787c98a?w=1920&q=80') center/cover no-repeat;color:#fff;display:flex;align-items:center}
+    .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;max-width:1140px;margin:0 auto;padding:0 20px;width:100%}
+    .hero-text h1{font-size:clamp(1.9rem,4.5vw,2.9rem);font-weight:800;line-height:1.15;letter-spacing:-.03em;margin-bottom:16px}
+    .hero-text h1 span{color:var(--gold2)}
+    .hero-text p{font-size:1.1rem;opacity:.92;max-width:440px;margin-bottom:24px}
+    .hero-features{display:flex;flex-wrap:wrap;gap:14px 24px;margin-bottom:28px}
+    .hero-features div{font-size:.9rem;opacity:.95}
+    .hero-right{position:relative;display:flex;justify-content:flex-end;align-items:flex-start;min-height:420px;padding-top:20px}
+    .hero-cards{position:absolute;top:0;left:0;right:40px;height:280px;pointer-events:none;z-index:1}
+    .card-img{position:absolute;border-radius:12px;box-shadow:0 16px 40px rgba(0,0,0,.3);object-fit:cover}
+    .card-svk{width:230px;top:10px;left:0;transform:rotate(-8deg);z-index:2}
+    .card-hun{width:210px;top:5px;left:100px;transform:rotate(6deg);z-index:1}
+    .hero-form{position:relative;z-index:3;margin-top:60px}
+    .hero-form{background:#fff;color:var(--text);border-radius:16px;padding:24px 22px;width:100%;max-width:360px;box-shadow:0 24px 60px rgba(0,0,0,.22)}
+    .hero-form h3{font-size:1.15rem;font-weight:700;color:var(--navy);margin-bottom:6px}
+    .hero-form>p{font-size:.88rem;color:var(--muted);margin-bottom:16px}
+    .hero-form input{width:100%;padding:11px 13px;border:1px solid var(--border);border-radius:10px;font-size:.92rem;margin-bottom:10px;outline:none}
+    .hero-form input:focus{border-color:var(--gold)}
+    .form-note{font-size:.75rem;color:var(--muted);margin-top:10px;text-align:center}
+    .trust{padding:70px 0;background:var(--soft)}
+    .section-head{text-align:center;margin-bottom:40px}
+    .section-head h2{font-size:clamp(1.5rem,3.5vw,2.1rem);font-weight:800;color:var(--navy);margin-bottom:10px}
+    .section-head p{color:var(--muted);max-width:600px;margin:0 auto;font-size:1.05rem}
+    .trust-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .trust-card{background:#fff;border-radius:var(--radius);padding:22px 20px;box-shadow:var(--shadow);display:flex;align-items:center;justify-content:space-between;gap:14px}
+    .trust-card h3{font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:6px}
+    .trust-card p{font-size:.9rem;color:var(--muted)}
+    .trust-img{font-size:2.2rem;flex-shrink:0}
+    .services{padding:70px 0}
+    .services-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:22px}
+    .service-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:.25s}
+    .service-card:hover{box-shadow:var(--shadow);transform:translateY(-4px)}
+    .service-img{width:100%;height:160px;object-fit:cover}
+    .service-body{padding:20px 22px 24px;display:flex;flex-direction:column;flex:1}
+    .price-tag{display:inline-block;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#1a1a1a;font-weight:700;font-size:.88rem;padding:5px 14px;border-radius:50px;margin-bottom:10px;align-self:flex-start}
+    .service-body h3{font-size:1.15rem;font-weight:700;color:var(--navy);margin-bottom:12px}
+    .service-body ul{list-style:none;margin-bottom:18px;flex:1}
+    .service-body li{position:relative;padding-left:18px;margin-bottom:8px;font-size:.92rem;color:var(--muted)}
+    .service-body li::before{content:'';position:absolute;left:0;top:7px;width:7px;height:7px;background:var(--gold);border-radius:50%}
+    .service-body .btn{width:100%}
+    .steps{padding:70px 0;background:var(--soft)}
+    .steps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:24px}
+    .step-item{text-align:center}
+    .step-icon{width:60px;height:60px;border-radius:50%;border:2px solid #cbd5e1;display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin:0 auto 14px;background:#fff}
+    .step-item h3{font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:8px}
+    .step-item p{font-size:.88rem;color:var(--muted);line-height:1.5}
+    .faq{padding:70px 0}
+    .faq-list{max-width:720px;margin:0 auto}
+    .faq-item{border:1px solid var(--border);border-radius:12px;margin-bottom:10px;overflow:hidden;background:#fff}
+    .faq-q{width:100%;text-align:left;padding:16px 20px;background:none;border:none;font-size:1rem;font-weight:600;color:var(--navy);cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+    .faq-q span{color:var(--gold);font-size:1.2rem}
+    .faq-a{padding:0 20px 16px;color:var(--muted);font-size:.95rem;display:none}
+    .faq-item.open .faq-a{display:block}
+    .reviews{padding:70px 0;background:var(--soft)}
+    .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .review-card{background:#fff;border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)}
+    .stars{color:var(--gold);letter-spacing:2px;margin-bottom:10px}
+    .review-head{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+    .avatar{width:42px;height:42px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700}
+    .review-name{font-weight:600;color:var(--navy)}
+    .review-meta{font-size:.8rem;color:var(--muted)}
+    .cta-mid{padding:70px 0;text-align:center}
+    .cta-mid h2{font-size:clamp(1.4rem,3.5vw,2rem);font-weight:800;color:var(--navy);margin-bottom:12px}
+    .cta-mid h2 span{color:#64748b}
+    .cta-mid p{color:var(--muted);max-width:580px;margin:0 auto 24px;font-size:1.05rem}
+    .cta-form{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;max-width:680px;margin:0 auto}
+    .cta-form input{padding:12px 16px;border:1px solid var(--border);border-radius:10px;font-size:.95rem;min-width:160px;flex:1}
+    .cta{padding:70px 0;text-align:center;color:#fff;background:linear-gradient(135deg,var(--navy),var(--navy2))}
+    .cta h2{font-size:clamp(1.5rem,3.5vw,2.1rem);font-weight:800;margin-bottom:12px}
+    .cta p{opacity:.9;margin-bottom:24px}
+    .footer{background:#071528;color:rgba(255,255,255,.65);padding:32px 0;text-align:center;font-size:.9rem}
+    .footer a{color:var(--gold)}
+    .chat-widget{position:fixed;bottom:22px;right:22px;z-index:9999}
+    .chat-bubble-btn{
+      display:flex;align-items:center;gap:10px;background:#c0392b;color:#fff;
+      border:none;border-radius:50px;padding:8px 16px 8px 8px;cursor:pointer;
+      box-shadow:0 8px 28px rgba(192,57,43,.4);max-width:280px;text-align:left;
+      transition:transform .2s;
+    }
+    .chat-bubble-btn:hover{transform:scale(1.03)}
+    .chat-bubble-btn img{width:40px;height:40px;border-radius:50%;object-fit:cover;flex-shrink:0}
+    .chat-bubble-btn strong{display:block;font-size:.85rem}
+    .chat-bubble-btn span{font-size:.7rem;opacity:.9}
+    .chat-toggle{width:58px;height:58px;border-radius:50%;border:none;cursor:pointer;background:linear-gradient(135deg,#0088cc,#00a0e3);box-shadow:0 6px 22px rgba(0,136,204,.45);display:none;align-items:center;justify-content:center}
+    .chat-toggle:hover{transform:scale(1.06)}
+    .chat-panel{position:absolute;bottom:70px;right:0;width:350px;max-width:calc(100vw - 28px);height:500px;max-height:70vh;background:#fff;border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,.2);display:none;flex-direction:column;overflow:hidden}
+    .chat-panel.open{display:flex}
+    .chat-header{background:#c0392b;color:#fff;padding:14px 16px;display:flex;align-items:center;gap:12px;flex-shrink:0}
+    .chat-avatar{width:42px;height:42px;border-radius:50%;object-fit:cover;background:#fff}
+    .chat-header strong{display:block;font-size:.9rem}
+    .chat-header span{font-size:.74rem;opacity:.9}
+    .chat-close{margin-left:auto;background:none;border:none;color:#fff;font-size:1.5rem;cursor:pointer;line-height:1;opacity:.85}
+    .chat-messages{flex:1;overflow-y:auto;padding:14px;background:#f7f7f8;display:flex;flex-direction:column;gap:10px}
+    .msg{max-width:85%;padding:10px 13px;border-radius:14px;font-size:.88rem;line-height:1.45}
+    .msg.bot{background:#fff;align-self:flex-start;border-bottom-left-radius:4px;box-shadow:0 1px 4px rgba(0,0,0,.05)}
+    .msg.user{background:#e8f4fd;align-self:flex-end;border-bottom-right-radius:4px}
+    .msg-time{font-size:.68rem;color:#94a3b8;margin-top:4px}
+    .msg.typing{background:#fff;align-self:flex-start;padding:12px 16px}
+    .msg.typing span{display:inline-block;width:7px;height:7px;border-radius:50%;background:#94a3b8;margin:0 2px;animation:blink 1.2s infinite}
+    .msg.typing span:nth-child(2){animation-delay:.2s}
+    .msg.typing span:nth-child(3){animation-delay:.4s}
+    @keyframes blink{0%,80%,100%{opacity:.3}40%{opacity:1}}
+    .chat-input-area{padding:12px 14px;background:#fff;border-top:1px solid #e2e8f0;flex-shrink:0}
+    .chat-input-area textarea,.chat-input-area input{width:100%;padding:10px 12px;border:1px solid #e2e8f0;border-radius:10px;font-size:.9rem;margin-bottom:8px;outline:none;font-family:inherit;resize:none}
+    .chat-send{width:100%;padding:11px;border:none;border-radius:50px;background:#c0392b;color:#fff;font-weight:600;font-size:.9rem;cursor:pointer}
+    .chat-form-title{font-size:.88rem;font-weight:600;color:#0b1e3a;margin-bottom:10px}
+    .chat-thanks{font-size:.9rem;color:#0b1e3a;text-align:center;padding:8px}
+    .chat-footer{padding:8px 14px;background:#f8fafc;font-size:.72rem;color:#94a3b8;text-align:center;border-top:1px solid #e2e8f0}
+    @media(max-width:960px){
+      .nav{display:none}.menu-toggle{display:block}
+      .hero-grid{grid-template-columns:1fr}.hero-cards{display:none}
+      .hero-right{align-items:stretch;margin-top:20px;min-height:auto;padding-top:0}.hero-cards{display:none}.hero-form{max-width:100%;margin-top:0}
+      .trust-grid{grid-template-columns:1fr}.reviews-grid{grid-template-columns:1fr}
+      .services-grid{grid-template-columns:1fr}
+      .cta-form{flex-direction:column}.cta-form input{min-width:100%}
+    }
+    @media(max-width:600px){
+      .logo span{display:none}
+      .header-actions .btn-gold{padding:9px 14px;font-size:.8rem}
+      .hero{padding:90px 0 50px;min-height:auto}
+      .hero-text h1{font-size:1.7rem}
+      .chat-panel{width:calc(100vw - 16px);right:-4px;height:62vh}
+      .chat-bubble-btn span{display:none}
+      .chat-bubble-btn{padding:8px;border-radius:50px}
+      .chat-bubble-btn strong{font-size:.75rem}
+    }
+  </style>
+</head>
+<body>
+<header class="header">
+  <div class="header-inner">
+    <a href="#" class="logo"><img src="logo-visa-docs-group.jpg" alt="Visa Docs Group"><span>Visa Docs Group</span></a>
+    <nav class="nav">
+      <a href="#reviews">Відгуки</a>
+      <a href="#services">Послуги</a>
+      <a href="#steps">Етапи роботи</a>
+      <a href="#faq">Часті питання</a>
+    </nav>
+    <div class="header-actions">
+      <a href="https://t.me/m/6swa4oSMYzZk" target="_blank" class="tg-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg></a>
+      <a href="https://t.me/m/6swa4oSMYzZk" target="_blank" class="btn btn-gold">БЕЗКОШТОВНА КОНСУЛЬТАЦІЯ</a>
+      <button class="menu-toggle" onclick="document.querySelector('.nav').style.display=document.querySelector('.nav').style.display==='flex'?'none':'flex'">☰</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-grid">
+    <div class="hero-text">
+      <h1>Оформлення європейських документів <span>за 21 день</span></h1>
+      <p>Повний супровід під ключ від першої консультації до готових документів</p>
+      <div class="hero-features">
+        <div>✓ Офіційно та легально</div>
+        <div>✓ Чіткі терміни за договором</div>
+        <div>✓ Особистий супровід на всіх етапах</div>
+      </div>
+      <a href="https://t.me/m/6swa4oSMYzZk" target="_blank" class="btn btn-white" style="padding:13px 26px">→ Безкоштовна консультація</a>
+    </div>
+    <div class="hero-right">
+      <div class="hero-cards">
+        <img src="img-slovakia.png" alt="ВНЖ Словаччина" class="card-img card-svk">
+        <img src="img-hungary.png" alt="ВНЖ Угорщина" class="card-img card-hun">
+      </div>
+      <div class="hero-form">
+        <h3>Безкоштовна консультація</h3>
+        <p>залиште свої контакти та дізнайтесь, яке оформлення підійде саме вам</p>
+        <form onsubmit="return sendLead(event)">
+          <input type="text" name="name" placeholder="Ім'я" required>
+          <input type="tel" name="phone" placeholder="Телефон / Telegram" required>
+          <input type="text" name="country" placeholder="Країна">
+          <input type="text" name="tg" placeholder="@ім'я в Telegram (якщо є)">
+          <button type="submit" class="btn btn-navy" style="width:100%;padding:12px">Отримати консультацію</button>
+        </form>
+        <p class="form-note">Ваші дані захищені</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="trust" id="trust">
+  <div class="container">
+    <div class="section-head">
+      <h2>Чому нам довіряють?</h2>
+      <p>Ми працюємо з клієнтами, які планують переїзд, навчання, роботу і тривале перебування в країнах Європи.<br>Допомагаємо зібрати документи, правильно їх оформити і уникнути відмов.</p>
+    </div>
+    <div class="trust-grid">
+      <div class="trust-card"><div><h3>Працюємо офіційно</h3><p>Всі документи оформляються відповідно до вимог європейських відомств.</p></div><div class="trust-img">📄</div></div>
+      <div class="trust-card"><div><h3>Досвід у складних кейсах</h3><p>Допомагаємо навіть в нестандартних ситуаціях — підбираємо рішення під кожного клієнта.</p></div><div class="trust-img">📁</div></div>
+      <div class="trust-card"><div><h3>Чесні терміни і прозорість</h3><p>Відразу озвучуємо реальні терміни і етапи роботи, без прихованих умов.</p></div><div class="trust-img">📅</div></div>
+      <div class="trust-card"><div><h3>Підтримка на кожному кроці</h3><p>Завжди на зв'язку в месенджерах, відповідаємо швидко, ведемо до результату.</p></div><div class="trust-img">💬</div></div>
+    </div>
+    <div style="text-align:center;margin-top:32px"><a href="https://t.me/m/6swa4oSMYzZk" target="_blank" class="btn btn-navy" style="padding:13px 28px">→ Залишити заявку</a></div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-head"><h2>Наші послуги</h2><p>Зберемо і підготуємо все, що потрібно для подачі в Європу</p></div>
+    <div class="services-grid">
+      <div class="service-card"><img class="service-img" src="img-slovakia.png" alt="ВНЖ Словаччина"><div class="service-body"><span class="price-tag">від 750€</span><h3>Гуманітарний ВНЖ в Словаччині</h3><ul><li>Статус на 3 роки</li><li>Все оформлення займає 2-3 тижні</li><li>Подача проходить не в столиці, а в регіональних містах</li></ul><a href="https://t.me/m/6swa4oSMYzZk" target="_blank" class="btn btn-navy">Написати менеджеру</a></div></div>
+      <div class="service-card"><img class="service-img" src="img-hungary.png" alt="ВНЖ Угорщина"><div class="service-body"><span class="price-tag">від 500€</span><h3>Гуманітарний ВНЖ в Угорщині</h3><ul><li>Статус до 2028 року</li><li>Для оформлення потрібно здійснити два візити до Будапешта</li><li>Для чоловіків «Резерв+» не потрібна</li></ul><a href="https://t.me/m/6swa4oSMYzZk" target="_blank" class="btn btn-navy">Написати менеджеру</a></div></div>
+      <div class="service-card"><img class="service-img" src="img-driver.png" alt="Права"><div class="service-body"><span class="price-tag">від 400€</span><h3>Міжнародні водійські права через Балі</h3><ul><li>Обмін українських прав на словацькі без іспитів</li><li>Оформлення гуманітарного ВНЖ Словаччини на 3 роки</li><li>Повний супровід + переклади та інструкції</li></ul><a href="https://t.me/m/6swa4oSMYzZk" target="_blank" class="btn btn-navy">Написати менеджеру</a></div></div>
+      <div class="service-card"><img class="service-img" src="img-usa.png" alt="США"><div class="service-body"><span class="price-tag">від 600€</span><h3>Візи в США</h3><ul><li>Підготовка документів 5−10 робочих днів</li><li>Оцінка шансів + індивідуальна стратегія</li><li>Інструктаж перед співбесідою</li></ul><a href="https://t.me/m/6swa4oSMYzZk" target="_blank" class="btn btn-navy">Написати менеджеру</a></div></div>
+      <div class="service-card"><img class="service-img" src="img-uk.png" alt="UK"><div class="service-body"><span class="price-tag">від 700€</span><h3>Візи до Великобританії</h3><ul><li>Підготовка 7−14 робочих днів</li><li>Аналіз ситуації та сильних сторін анкети</li><li>Супровід до отримання рішення</li></ul><a href="https://t.me/m/6swa4oSMYzZk" target="_blank" class="btn btn-navy">Написати менеджеру</a></div></div>
+      <div class="service-card"><img class="service-img" src="img-dog.png" alt="Dog"><div class="service-body"><span class="price-tag">від 700€</span><h3>Service Dog Package</h3><ul><li>Комплексне оформлення статусу собаки-помічника</li><li>ID-карта, Public Access Certificate, жетон і ошийник</li><li>Доставка пакета по Європі ≈ 1 місяць</li></ul><a href="https://t.me/m/6swa4oSMYzZk" target="_blank" class="btn btn-navy">Написати менеджеру</a></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="steps" id="steps">
+  <div class="container">
+    <div class="section-head"><h2>Етапи роботи з Visa Docs Group</h2><p>Прозорий процес від заявки до готових документів</p></div>
+    <div class="steps-grid">
+      <div class="step-item"><div class="step-icon">💬</div><h3>Консультація</h3><p>Вивчаємо ситуацію, підбираємо варіант і пояснюємо терміни.</p></div>
+      <div class="step-item"><div class="step-icon">📋</div><h3>Підготовка документів</h3><p>Збираємо пакет, перекладаємо і перевіряємо на відповідність.</p></div>
+      <div class="step-item"><div class="step-icon">📅</div><h3>Запис на подачу</h3><p>Бронюємо дату. Вам не потрібно шукати слоти.</p></div>
+      <div class="step-item"><div class="step-icon">👥</div><h3>Супровід при візиті</h3><p>Йдемо разом, підказуємо і контролюємо процес.</p></div>
+      <div class="step-item"><div class="step-icon">✅</div><h3>Отримання документів</h3><p>Відстежуємо статус і допомагаємо отримати ВНЖ або візу.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="section-head"><h2>Часті питання</h2></div>
+    <div class="faq-list">
+      <div class="faq-item"><button class="faq-q" onclick="this.parentElement.classList.toggle('open')">Скільки займає оформлення ВНЖ? <span>+</span></button><div class="faq-a">Зазвичай 2–3 тижні з моменту повного пакета документів.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="this.parentElement.classList.toggle('open')">Чи потрібна особиста присутність? <span>+</span></button><div class="faq-a">Для більшості послуг потрібні 1–2 візити.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="this.parentElement.classList.toggle('open')">Які гарантії ви даєте? <span>+</span></button><div class="faq-a">Працюємо за договором, озвучуємо реальні терміни і ризики наперед.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="this.parentElement.classList.toggle('open')">Як почати? <span>+</span></button><div class="faq-a">Напишіть у Telegram — безкоштовно проконсультуємо.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews" id="reviews">
+  <div class="container">
+    <div class="section-head"><h2>Відгуки</h2><p>Досвід людей, які вже оформили документи</p></div>
+    <div class="reviews-grid">
+      <div class="review-card"><div class="stars">★★★★★</div><div class="review-head"><div class="avatar">О</div><div><div class="review-name">Олена К.</div><div class="review-meta">ВНЖ Словаччина</div></div></div><p>Все зробили швидко і чітко. Супровід на кожному етапі.</p></div>
+      <div class="review-card"><div class="stars">★★★★★</div><div class="review-head"><div class="avatar">А</div><div><div class="review-name">Андрій М.</div><div class="review-meta">Віза США</div></div></div><p>Професійний підхід. Підготували до співбесіди успішно.</p></div>
+      <div class="review-card"><div class="stars">★★★★★</div><div class="review-head"><div class="avatar">І</div><div><div class="review-name">Ірина С.</div><div class="review-meta">Service Dog</div></div></div><p>Оформили статус для собаки без проблем.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-mid">
+  <div class="container">
+    <h2>Не відкладайте переїзд — <span>почніть з простого кроку</span></h2>
+    <p>Ми безкоштовно розберемо вашу ситуацію і підкажемо оптимальну програму ВНЖ.</p>
+    <form class="cta-form" onsubmit="return sendLead(event)">
+      <input type="text" name="name" placeholder="Ваше ім'я" required>
+      <input type="text" name="tg" placeholder="@Telegram">
+      <input type="tel" name="phone" placeholder="+380..." required>
+      <button type="submit" class="btn btn-navy">→ Відправити</button>
+    </form>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container">
+    <h2>Готові розпочати?</h2>
+    <p>Залиште заявку — підкажемо, який варіант підходить саме вам</p>
+    <a href="https://t.me/m/6swa4oSMYzZk" target="_blank" class="btn btn-gold" style="padding:14px 30px">Безкоштовна консультація</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <p>© 2026 Visa Docs Group. Всі права захищені.</p>
+    <p style="margin-top:8px"><a href="https://t.me/m/6swa4oSMYzZk" target="_blank">Написати в Telegram</a></p>
+  </div>
+</footer>
+
+<div class="chat-widget">
+  <button class="chat-bubble-btn" id="chatToggle">
+    <img src="https://i.pravatar.cc/100?img=12" alt="Максим">
+    <div>
+      <strong>Максим — консультант</strong>
+      <span>На зв'язку, підкажу по документах</span>
+    </div>
+  </button>
+  <div class="chat-panel" id="chatPanel">
+    <div class="chat-header">
+      <img src="https://i.pravatar.cc/100?img=12" alt="Максим" class="chat-avatar">
+      <div><strong>Максим — Міграційний консультант</strong><span>На зв'язку, підкажу по документах ЄС</span></div>
+      <button class="chat-close" id="chatClose">×</button>
+    </div>
+    <div class="chat-messages" id="chatMessages"></div>
+    <div class="chat-input-area" id="chatInputArea"></div>
+    <div class="chat-footer">Відділ по роботі з клієнтами Visa Docs Group</div>
+  </div>
+</div>
+
+<script>
+function sendLead(e) {
+  e.preventDefault();
+  var f = e.target;
+  var name = (f.name && f.name.value) ? f.name.value.trim() : '';
+  var phone = (f.phone && f.phone.value) ? f.phone.value.trim() : '';
+  var country = (f.country && f.country.value) ? f.country.value.trim() : '';
+  var tg = (f.tg && f.tg.value) ? f.tg.value.trim() : '';
+  var text = '🔥 Нова заявка Visa Docs Group%0A%0A';
+  if (name) text += '👤 ' + encodeURIComponent(name) + '%0A';
+  if (phone) text += '📱 ' + encodeURIComponent(phone) + '%0A';
+  if (country) text += '🌍 ' + encodeURIComponent(country) + '%0A';
+  if (tg) text += '✈️ ' + encodeURIComponent(tg) + '%0A';
+  window.open('https://t.me/m/6swa4oSMYzZk?text=' + text, '_blank');
+  f.reset();
+  alert('Дякуємо! Відкриється Telegram — натисніть «Надіслати».');
+  return false;
+}
+
+(function () {
+  var toggle = document.getElementById('chatToggle');
+  var panel = document.getElementById('chatPanel');
+  var closeBtn = document.getElementById('chatClose');
+  var messages = document.getElementById('chatMessages');
+  var inputArea = document.getElementById('chatInputArea');
+  var started = false;
+  var userData = {};
+
+  if (!toggle || !panel) return;
+
+  toggle.addEventListener('click', function () {
+    panel.classList.add('open');
+    toggle.style.display = 'none';
+    if (!started) startDialog();
+  });
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function () {
+      panel.classList.remove('open');
+      toggle.style.display = 'flex';
+    });
+  }
+
+  function addBot(t) {
+    var d = document.createElement('div');
+    d.className = 'msg bot';
+    d.innerHTML = t + '<div class="msg-time">Щойно</div>';
+    messages.appendChild(d);
+    messages.scrollTop = messages.scrollHeight;
+  }
+
+  function addUser(t) {
+    var d = document.createElement('div');
+    d.className = 'msg user';
+    d.innerHTML = t + '<div class="msg-time">Щойно</div>';
+    messages.appendChild(d);
+    messages.scrollTop = messages.scrollHeight;
+  }
+
+  function showTyping() {
+    var t = document.createElement('div');
+    t.className = 'msg typing';
+    t.id = 'typing';
+    t.innerHTML = '<span></span><span></span><span></span>';
+    messages.appendChild(t);
+    messages.scrollTop = messages.scrollHeight;
+  }
+
+  function hideTyping() {
+    var t = document.getElementById('typing');
+    if (t) t.remove();
+  }
+
+  function wait(ms) {
+    return new Promise(function (r) { setTimeout(r, ms); });
+  }
+
+  async function startDialog() {
+    started = true;
+    showTyping();
+    await wait(700);
+    hideTyping();
+    addBot('Добрий день! Потрібно терміново оформити європейські документи від 20 днів?');
+    showTyping();
+    await wait(900);
+    hideTyping();
+    addBot('Напишіть вашу ситуацію — безкоштовно зорієнтую за реальними термінами та вартістю «під ключ».');
+
+    inputArea.innerHTML = '<textarea id="sitInput" placeholder="Опишіть ситуацію..." rows="2"></textarea><button type="button" class="chat-send" id="sitBtn">Надіслати</button>';
+
+    document.getElementById('sitBtn').addEventListener('click', async function () {
+      var v = document.getElementById('sitInput').value.trim();
+      if (!v) return;
+      userData.situation = v;
+      addUser(v);
+      inputArea.innerHTML = '';
+      showTyping();
+      await wait(700);
+      hideTyping();
+      addBot('Дякую! Залиште номер телефону або нік у Telegram — надішлю перелік документів та розрахунок.');
+
+      inputArea.innerHTML = '<div class="chat-form-title">Отримати консультацію / Розрахувати терміни</div>' +
+        '<input type="tel" id="phInput" placeholder="Телефон *" >' +
+        '<input type="text" id="nmInput" placeholder="Ім\'я">' +
+        '<button type="button" class="chat-send" id="leadBtn">Відправити</button>';
+
+      document.getElementById('leadBtn').addEventListener('click', function () {
+        var phone = document.getElementById('phInput').value.trim();
+        var name = document.getElementById('nmInput').value.trim();
+        if (!phone) {
+          alert('Вкажіть телефон');
+          return;
+        }
+        addUser(phone + (name ? ' / ' + name : ''));
+        inputArea.innerHTML = '<div class="chat-thanks" style="text-align:center;padding:20px 10px">' +
+          '<div style="width:56px;height:56px;border-radius:50%;background:#e8f8ef;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:28px;color:#22c55e">✓</div>' +
+          '<strong>Дякуємо!</strong><br>Наш спеціаліст уже вивчає ваш запит та зв\'яжеться з вами найближчим часом.</div>';
+
+        var text = '🔥 Заявка з чату Visa Docs Group%0A%0A📱 ' + encodeURIComponent(phone);
+        if (name) text += '%0A👤 ' + encodeURIComponent(name);
+        if (userData.situation) text += '%0A📝 ' + encodeURIComponent(userData.situation);
+        window.open('https://t.me/m/6swa4oSMYzZk?text=' + text, '_blank');
+      });
+    });
+  }
+})();
+</script>
+</body>
+</html>
